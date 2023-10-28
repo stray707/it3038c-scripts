@@ -1,0 +1,28 @@
+body {
+    font-family: 'Jakarta', sans-serif;
+    background-color: darkgreen;
+    color: white;
+}
+
+.mainContainer {
+	background-color: black;
+	padding: 10px;
+	border-style: 2px solid black;
+	border-radius: 10px;
+}
+
+#trackList li {
+    cursor: pointer;
+}
+
+#trackList li:hover {
+    color: gray;
+}
+
+#albumList li {
+    cursor: pointer;
+}
+
+#albumList li:hover {
+    color: gray;
+}

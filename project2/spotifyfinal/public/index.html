@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Spotify Stats for Nerds</title>
+</head>
+<body>
+	<div class="mainContainer">
+		<h1>Spotify Stats for Nerds</h1>
+		
+		<h3>Album Name:</h3>
+		<div><label for="albumName"></label><input type="text" id="albumName"></div>
+		<div><input type="submit" value="Search by album name" id="albumNameSearch"></div>
+		<ul id="albumList"></ul>
+
+		<h3>Album ID: You can Find the ID in the Spotify URL here: https://open.spotify.com/album/*ALBUM_ID_HERE*</h3>
+		<p>Sometimes there is text in the URL after the characters "?si=...", the spotify ID comes before them.</p>
+		<p>For an example, try this album ID: 7aNclGRxTysfh6z0d8671k</p>
+		<p>Or this one: 1lM5IfaqcIsXd6UCV3aDSs</p>
+		<div><label for="albumSubmission"></label><input type="text" id="albumSubmission"></div>
+		<div><input type="submit" value="Search by album ID" id="albumSearch"></div>
+
+
+		<div id="trackAnalysis">
+			<h3>Track Analysis</h3>
+			<p>Click on a track after searching to display analysis details.</p>
+			Loudness: <input id="loudness" type="text" readonly><br>
+			Tempo: <input id="tempo" type="text" readonly><br>
+			Time signature: <input id="time_signature" type="text" readonly><br>
+			Key: <input id="key" type="text" readonly><br>
+		</div>
+
+		<div id="albumInfo"></div>
+		<ul id="trackList"></ul>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
