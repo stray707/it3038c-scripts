@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+
+    <!-- Apparently it's recommended to add a 'static' folder for Flask when using things like icons, pictures, and css. -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pages.css') }}">
+    <title>stray</title>
+</head>
+<body>
+
+    <div class="total_container">
+        <div class="top_container">
+
+            <a href="{{ url_for('hello') }}"><img src="{{ url_for('static', filename='images/blur50.png') }}" alt="Stray logo" class="logo" alt="stray logo"></a>
+
+            <div class="rightside">
+                <div class="nav">
+                    <!-- This is also how Flask looks for other pages in the project directory -->
+                    <a href="{{ url_for('blog') }}" class="button">Blog</a>
+                    <a href="{{ url_for('education') }}" class="button">Education/Skills</a>
+                    <a href="{{ url_for('projects') }}" class="button">Projects</a>
+                    <a href="{{ url_for('archives') }}" class="button">Archives</a>
+                </div>
+
+                <div class="blog_list">
+
+                    <!-- refers to post object for date, title, and text content. Also utilizes a loop for every post, in reverse so that the latest posts remain at the top. -->
+                    {% for post in posts %}
+                        <div class="post">
+                            <i><p>{{ post.date }}</p></i>
+                            <h1>{{ post.title }}</h1>
+                            <p>{{ post.content }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+</body>
+</html>

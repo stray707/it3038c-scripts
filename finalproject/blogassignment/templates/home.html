@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>stray</title>
+</head>
+<body>
+    <div class="container">
+    	 <a href="{{ url_for('hello') }}"><img src="{{ url_for('static', filename='images/blur50.png') }}" alt="Stray logo" class="logo" alt="stray logo"></a>
+        <h1 class="title">str4y.cat</h1>
+        <nav>
+	        <div class="button-container">
+	        	<a href="#"Homepage class="button">Homepage</a>
+	        	<a href="{{ url_for('blog') }}" class="button">Blog</a>
+				<a href="{{ url_for('education') }}" class="button">Education/Skills</a>
+				<a href="{{ url_for('projects') }}" class="button">Projects</a>
+				<a href="{{ url_for('archives') }}" class="button">Archives</a>
+	        </div>
+    	</nav>
+    </div>
+</body>
+</html>
